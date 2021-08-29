@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* scrollable-element */
+
+html {
+  --scrollbarBG: #ffeddd;
+  --thumbBG: #fabe4e;
+}
+::-webkit-scrollbar {
+  width: 15px;
+  height: 13px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+html,
+body {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Raleway";
+}
+
+#navbar {
+  height: 100%;
+  width: 285px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffeddd;
+  overflow-x: hidden;
+}
+
+#navbar i {
+  color: #fabe4e;
+  font-size: 1.3em;
+  margin-right: 0.12em;
+}
+
+#navbar .title {
+  text-align: center;
+  font-size: 3.5em;
+  font-weight: 600;
+  letter-spacing: -6px;
+  font-family: "Raleway";
+  padding-top: 20%;
+}
+
+#navbar li {
+  list-style: none;
+  position: relative;
+  margin: 0 12%;
+  font-size: 1.1em;
+}
+
+#navbar ul {
+  padding-bottom: 20px;
+}
+
+#navbar a {
+  color: #454549;
+  font-weight: 400;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+#navbar a:hover {
+  color: #cc7000;
+}
+
+header {
+  font-size: 2.2em;
+  font-weight: 500;
+}
+
+#main-doc header {
+  color: #182d2e;
+  text-align: left;
+  margin: 10px;
+}
+
+#main-doc {
+  /*   position: absolute; */
+  padding: 2.5em 8em 3em;
+  background-color: #fdfbf6;
+}
+
+.main-section {
+  margin-bottom: 1.5em;
+}
+
+.main-section article {
+  color: #4d4e53;
+  text-align: justify;
+  margin: 0px 40px 0px 30px;
+  overflow-x: none;
+}
+
+.main-section li {
+  margin-left: 2.3em;
+  margin-top: 1em;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  max-height: 10em;
+  line-height: 2em;
+  border-left: 0.3em solid #fabe4e;
+  color: #cc7000 !important;
+  background-color: #f7f7f7;
+  padding: 0.5em 1em;
+  margin: 1em;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+#Reference a {
+  color: #cc7000;
+}
+
+#Reference a:hover {
+  color: #9f5802;
+}
+
+.main-section hr {
+  margin: 0px 40px 15px 10px;
+  border-top: 1px solid #fddb8d;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  /* display: flex;
+  flex-wrap: wrap; */
+  color: #454549;
+  justify-content: space-between;
+}
+
+footer .copyright i {
+  color: #fabe4e;
+}
+
+.bottom {
+  text-align: center;
+  font-size: 15px;
+}
+.bottom .bottom-sm i {
+  font-size: 1.3rem;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+  color: #454549;
+}
+
+.bottom .bottom-sm i:hover {
+  color: #fabe4e;
+  cursor: pointer;
+}
+
+.bottom p:first-of-type {
+  float: left;
+}
+
+.bottom p:last-of-type {
+  float: right;
+}
+
+.bottom hr {
+  border-top: 1px solid #fddb8d;
+}
+
+@media only screen and (max-width: 815px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 225px;
+    border: none;
+    z-index: 1;
+    border-bottom: 2px solid;
+  }
+}
+
+.title {
+  margin: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#main-doc {
+  margin-left: 285px;
+  font-size: 17px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 815px) {
+  #main-doc {
+    max-width: 100%;
+    flex-direction: column;
+    margin-top: 216px;
+    margin-left: initial;
+  }
+
+  .navbar-movil {
+    display: flex;
+    align-items: center;
+  }
+
+  #navbar .title {
+    padding-top: 0%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #navbar {
+    width: 100%;
+    position: relative;
+  }
+
+  .navbar-movil {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 5% 3% 5%;
+  }
+
+  #main-doc {
+    margin-top: 0px;
+  }
+
+  #navbar .title {
+    font-size: 2.5em;
+    padding-top: 0%;
+    padding-left: 2%;
+  }
+
+  #navbar li {
+    margin: 0 13%;
+  }
+
+  #navbar i {
+    margin-right: 0.15em;
+  }
+}
